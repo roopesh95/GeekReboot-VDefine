@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="720.0" prefWidth="1355.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <TitledPane alignment="CENTER" collapsible="false" ellipsisString="" lineSpacing="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="712.0" text="VDefine" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="485.0" prefWidth="749.0">
+               <children>
+                  <ImageView fx:id="frame" fitHeight="530.0" fitWidth="800.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" >
+                     <viewport>
+                        <Rectangle2D width="700.0" />
+                     </viewport></ImageView>
+                  <Button fx:id="startCam" layoutX="3.0" layoutY="590.0" mnemonicParsing="false" onAction="#startCamera" prefHeight="55.0" prefWidth="102.0" text="Start" styleClass="aaa" stylesheets="@application.css" />
+                
+                  <Button fx:id="recogniseBtn" disable="true" layoutX="545.0" text="Recognize" layoutY="590.0" mnemonicParsing="false" onAction="#faceRecognise" prefHeight="55.0" prefWidth="158.0"  styleClass="recog" stylesheets="@application.css">
+                     </Button>
+
+                  <Button fx:id="stopBtn" layoutX="7.0" layoutY="590.0" mnemonicParsing="false" onAction="#stopCam" prefHeight="55.0" prefWidth="101.0" styleClass="stop1" stylesheets="@application.css" text="Stop" visible="false" />
+                  
+                  <Label fx:id="savedLabel" layoutX="282.0" layoutY="207.0" prefHeight="52.0" prefWidth="215.0" text=" Face  Saved !" underline="true" visible="false">
+                     <font>
+                        <Font name="Vonique 92" size="25.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#bc2b30" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <ProgressIndicator fx:id="pb" layoutX="360.0" layoutY="156.0" progress="0.0" visible="false" />
+                  <Label fx:id="warning" layoutX="141.0" layoutY="365.0" prefHeight="52.0" prefWidth="447.0" style="-fx-background-color: #e53b24; -fx-background-radius: 14px;" text="  Warning: Fields Cannot Be empty !" textFill="WHITE" underline="true" visible="false">
+                     <font>
+                        <Font name="Estrangelo Edessa" size="19.0" />
+                     </font>
+                  </Label>
+                  
+               </children>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="Poiret One" size="23.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <textFill>
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.9714285714285714">
+               <stops>
+                  <Stop color="#be0ada" />
+                  <Stop color="#0a090a" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </TitledPane>
+   </center>
+   <left>
+      <TitledPane fx:id="dataPane" disable="true" prefHeight="720.0" prefWidth="302.0" text="Registration" BorderPane.alignment="CENTER">
+         <content>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="276.0" prefWidth="300.0">
+              <items>
+               <AnchorPane fx:id="pdPane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label fx:id="title" layoutX="31.0" layoutY="-1.0" text="Register Employee:">
+                           <font>
+                              <Font name="Vermin Vibes 4 Helium" size="20.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient cycleMethod="REPEAT" endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#e41b1b" />
+                                    <Stop color="#1c59c3" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="70.0" text="FName">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="fname" layoutX="98.0" layoutY="73.0" prefHeight="25.0" prefWidth="181.0" promptText="Enter First Name" />
+                     
+                        <Label layoutX="24.0" layoutY="102.0" text="LName">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="lname" layoutX="97.0" layoutY="105.0" prefHeight="25.0" prefWidth="181.0" promptText="Enter Last name" />
+                        <Separator layoutX="34.0" layoutY="33.0" prefHeight="6.0" prefWidth="239.0" />
+                        <TextField fx:id="sec" layoutX="96.0" layoutY="201.0" prefHeight="25.0" prefWidth="181.0"  promptText="Enter Department" />
+                        <Label layoutX="23.0" layoutY="198.0" text="Dept">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="133.0" text="ID">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="reg" layoutX="96.0" layoutY="136.0" prefHeight="25.0" prefWidth="181.0" promptText="Enter Employee ID" />
+                        <TextField fx:id="age" layoutX="97.0" layoutY="169.0" prefHeight="25.0" prefWidth="181.0"  promptText="Enter Age"  />
+                        <Label layoutX="28.0" layoutY="166.0" text="Age">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="motionView" fitHeight="211.0" fitWidth="298.0" layoutX="2.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+                     </children>
+                       <Button id="savef"  fx:id="saveBtn" disable="true" layoutX="145.0" layoutY="285.0" text="Register" mnemonicParsing="false" onAction="#saveFace" prefHeight="50.0" prefWidth="91.0" stylesheets="@application.css" />
+                  </AnchorPane>
+               
+              </items>
+            </SplitPane>
+         </content></TitledPane>
+   </left>
+   <right>
+      <TitledPane animated="false" prefHeight="720.0" prefWidth="360.0" text="Fetched Data" BorderPane.alignment="CENTER">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="190.0">
+                     <children>
+                        <ListView fx:id="output" editable="true" layoutX="4.0" layoutY="4.0" prefHeight="720.0" prefWidth="340.0" style="-fx-padding: 10;">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </ListView>
+                     </children></AnchorPane>
+      
+      </TitledPane>
+   </right>
+
+</BorderPane>

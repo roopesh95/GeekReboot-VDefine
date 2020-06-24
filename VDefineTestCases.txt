@@ -1,0 +1,32 @@
+1.Verify that the below 3 sections are displyed on the application:
+     i. Registartion
+    ii. Face&Temperature Detection
+   iii. Fetched Data
+2.Verify that the below buttons are displayed
+    i. Register
+   ii. Start
+  iii. Recognize
+3.Verify that when user clicks on Start button, Camera turned on in the Face detection section.
+4.Verify that once the user clicks on Start button, it replaced with Stop button.
+5.Verify that for registered user, when user clicks on Recoginze button, employee data should be displayed under 'Face Data' section.
+6.Verify that for un-registered user, when user clicks on Recoginze button, no data should be displayed under 'Face Data' section.
+7.Verify that the data displayed under 'Face Data' section should match with the data entered at the time of Registartion
+8.Verify that the below details are displayed under 'Face Data'section:
+    i. First Name
+   ii. Last Name
+  iii. Employee ID
+   iv. Age
+    v. Department
+   vi. Temperature
+  vii. Login Time
+9.Verify that the validation message is displayed when detected temperature is greater than or equal to 100F
+10.Verify that an Email sent to HR when detected temperature is greater than or equal to 100F
+11.Verify that the below fields are present in the Registration section:
+    i. Register Employee[header]
+   ii. FName
+  iii. LName
+   iv. ID
+    v. Age
+   vi. Dept
+12.Verify that the Validation message displayed when user clicks on Register button without entering value in any of the input fields.
+13.Verify that the Success message is displayed when user enters data in all the fields and click on Register button.

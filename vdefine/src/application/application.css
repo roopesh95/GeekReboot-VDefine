@@ -1,0 +1,72 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+
+
+
+#savef
+{
+
+-fx-min-height: 30px;
+
+    -fx-min-width: 120px;
+	
+
+    -fx-background-size: 50px 50px;
+
+    -fx-background-repeat: no-repeat;
+
+    -fx-background-position: center 7px;
+}
+
+.recog
+{
+
+-fx-min-height: 50px;
+
+    -fx-min-width: 90px;
+
+	
+    
+
+    -fx-background-size: 50px 50px;
+
+    -fx-background-repeat: no-repeat;
+
+    -fx-background-position: center 7px;
+}
+
+
+
+
+
+.stop1
+{
+
+-fx-min-height: 50px;
+
+    -fx-min-width: 90px;
+
+	
+
+    -fx-background-size: 50px 50px;
+
+    -fx-background-repeat: no-repeat;
+
+    -fx-background-position: center 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
